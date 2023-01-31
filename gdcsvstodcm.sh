@@ -19,7 +19,7 @@ TMPSLIDEUIDFILE="slideuid.csv"
 
 
 #PIXELMEDDIR="${HOME}/work/pixelmed/imgbook"
-PIXELMEDDIR="/files"
+PIXELMEDDIR="/idc-wsi-conversion"
 PATHTOADDITIONAL="${PIXELMEDDIR}/lib/additional"
 
 filename=`basename "${infile}" '.svs'`
