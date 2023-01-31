@@ -38,7 +38,7 @@ tcgaproject=`dirname "${infile}" | sed -e 's/^.*\(TCGA-[A-Z][A-Z]*\).*$/\1/'`
 if [ -z "${outdir}" ]
 then
 	#outdir="Converted/${tcgaproject}/${filename}"
-	outdir="$WORKFLOW_DIR/$OPERATOR_OUT_DIR/${tcgaproject}/${filename}"
+	outdir=Data
 fi
 
 tcgatissuesourcesite=`echo "${filename}" | sed -e 's/^TCGA-\([0-9A-Z]*\).*$/\1/'`
