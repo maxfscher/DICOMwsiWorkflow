@@ -16,9 +16,9 @@ def getDicomInfos(file):
     return float(file.TotalPixelMatrixOriginSequence[0].XOffsetInSlideCoordinateSystem),float(file.TotalPixelMatrixOriginSequence[0].YOffsetInSlideCoordinateSystem),file.ImagedVolumeWidth,file.ImagedVolumeHeight,spacing
 
 
-FileFull=pydicom.dcmread('/home/m813r/Projects/StructuredReports/CMU-1/TissueAnnotations/DICOM/EF1ED2ED/4349C086/7ACFCCA6.dcm')
-ImageFile_overlay=pydicom.dcmread('/home/m813r/Projects/StructuredReports/CMU-1/Image/DICOM/1E447C90/2AB6DFD1/low.dcm')
-ImageFile=pydicom.dcmread('/home/m813r/Projects/StructuredReports/CMU-1/Image/DICOM/1E447C90/2AB6DFD1/highest.dcm')
+FileFull=pydicom.dcmread('./7ACFCCA6.dcm')
+ImageFile_overlay=pydicom.dcmread('./Images/low.dcm')
+ImageFile=pydicom.dcmread('./Images/highest.dcm')
 
 X_Offset,Y_Offset,Width,Height,(spacing_x,spacing_y)=getDicomInfos(ImageFile)
 Origin_X=X_Offset-Height
